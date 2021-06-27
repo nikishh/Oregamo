@@ -1,3 +1,36 @@
 body {
-  background: red;
+  font-family: "Noto Sans JP", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #232323;
+}
+
+nav li a:hover {
+  color: #ff8c00;
+}
+
+section.main {
+  background: #F8F8F8;
+}
+
+.smsize {
+  background: #F8F8F8;
+}
+
+.cart {
+  border: 2px solid #ff8c00;
+  color: #ff8c00;
+  transition: all 0.3s ease-in-out;
+}
+.cart:hover {
+  background: #FC5404;
+  border: white;
+  color: white;
+}
+
+.btn-primary {
+  background: #ff8c00;
+  transition: all 0.3s ease-in-out;
+}
+.btn-primary:hover {
+  background: #FC5404;
 }

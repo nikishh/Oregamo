@@ -1,0 +1,47 @@
+@import './variables';
+
+body{
+    font-family: 'Noto Sans JP', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: $dark;
+}
+
+nav li a{
+    &:hover{
+        color: $primary;
+    }
+}
+
+// nav li:last-child a{
+//     &:hover{
+        
+//     }
+// }
+
+section.main{
+    background: $secondary;
+}
+
+.smsize{
+    background: $secondary;
+}
+
+.cart{
+
+    border: 2px solid $primary;
+    color: $primary;
+    transition: $smooth;
+    &:hover{
+        background: $primary-hover;
+        border: $pure;
+        color: $pure;
+    }
+}
+
+.btn-primary{
+    background: $primary;
+    transition: $smooth;
+    &:hover{
+        background: $primary-hover;
+    }
+}
