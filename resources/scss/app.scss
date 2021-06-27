@@ -26,7 +26,22 @@ section.main{
     background: $secondary;
 }
 
-.cart{
+.btn-primary{
+    background: $primary;
+    transition: $smooth;
+    &:hover{
+        background: $primary-hover;
+    }
+}
+
+section.cart{
+    background: $secondary;
+    .amount{
+        color: $primary;
+    }
+}
+
+.empty-cart{
 
     border: 2px solid $primary;
     color: $primary;
@@ -38,10 +53,39 @@ section.main{
     }
 }
 
-.btn-primary{
-    background: $primary;
-    transition: $smooth;
-    &:hover{
-        background: $primary-hover;
+section.login{
+    background: $secondary;
+    min-height: calc(100vh - 86px);
+    a{
+        color: $primary;
+        &:hover{
+           color: $primary-hover;
+        }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

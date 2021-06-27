@@ -16,21 +16,39 @@ section.main {
   background: #F8F8F8;
 }
 
-.cart {
-  border: 2px solid #ff8c00;
-  color: #ff8c00;
-  transition: all 0.3s ease-in-out;
-}
-.cart:hover {
-  background: #FC5404;
-  border: white;
-  color: white;
-}
-
 .btn-primary {
   background: #ff8c00;
   transition: all 0.3s ease-in-out;
 }
 .btn-primary:hover {
   background: #FC5404;
+}
+
+section.cart {
+  background: #F8F8F8;
+}
+section.cart .amount {
+  color: #ff8c00;
+}
+
+.empty-cart {
+  border: 2px solid #ff8c00;
+  color: #ff8c00;
+  transition: all 0.3s ease-in-out;
+}
+.empty-cart:hover {
+  background: #FC5404;
+  border: white;
+  color: white;
+}
+
+section.login {
+  background: #F8F8F8;
+  min-height: calc(100vh - 86px);
+}
+section.login a {
+  color: #ff8c00;
+}
+section.login a:hover {
+  color: #FC5404;
 }
