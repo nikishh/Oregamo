@@ -1,4 +1,7 @@
 @import './variables';
+@import'~noty/src/noty.scss';
+@import '~noty/src/themes/mint.scss';
+
 
 body{
     font-family: 'Noto Sans JP', sans-serif;
@@ -41,8 +44,7 @@ section.cart{
     }
 }
 
-.empty-cart{
-
+.add-to-cart{
     border: 2px solid $primary;
     color: $primary;
     transition: $smooth;
@@ -52,6 +54,18 @@ section.cart{
         color: $pure;
     }
 }
+
+// .empty-cart{
+
+//     border: 2px solid $primary;
+//     color: $primary;
+//     transition: $smooth;
+//     &:hover{
+//         background: $primary-hover;
+//         border: $pure;
+//         color: $pure;
+//     }
+// }
 
 section.login{
     background: $secondary;
@@ -63,7 +77,6 @@ section.login{
         }
     }
 }
-
 
 
 

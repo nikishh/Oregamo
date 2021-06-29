@@ -5,47 +5,26 @@
             <img class="w-24" src="/img/shopping-cart.png" alt="">
             <h1 class="font-bold ml-4 text-2xl">Order summary</h1>
         </div>
+
+        <% if (session.cart) { %>
+
         <div class="pizza-list">
 
-            <div class="flex items-center my-8">
-                <img class="w-24" src="/img/main2.png" alt="">
-                <div class="flex-1 ml-4">
-                    <h1>mok</h1>
-                    <span>desc</span>
+            <% for(let food of Object.values(session.cart.items)){ %>
+             
+                <div class="flex items-center my-8">
+                    <img class="w-24" src="/img/<%=food.item.image %>" alt="">
+                    <div class="flex-1 ml-4">
+                        <h1><%= food.item.name %> </h1>
+                        <span><%=food.item.description%></span>
+                    </div>
+                    <span class="flex-1"><%= food.qty %> Pcs</span>
+                    <span class="font-bold text-lg">$<%= food.qty*food.item.price %> </span>
                 </div>
-                <span class="flex-1">Pcs</span>
-                <span class="font-bold text-lg">$8</span>
-            </div>
 
-            <div class="flex items-center my-8">
-                <img class="w-24" src="/img/main2.png" alt="">
-                <div class="flex-1 ml-4">
-                    <h1>mok</h1>
-                    <span>desc</span>
-                </div>
-                <span class="flex-1">Pcs</span>
-                <span class="font-bold text-lg">$8</span>
-            </div>
+            <% }%>
+            
 
-            <div class="flex items-center my-8">
-                <img class="w-24" src="/img/main2.png" alt="">
-                <div class="flex-1 ml-4">
-                    <h1>mok</h1>
-                    <span>desc</span>
-                </div>
-                <span class="flex-1">Pcs</span>
-                <span class="font-bold text-lg">$8</span>
-            </div>
-
-            <div class="flex items-center my-8">
-                <img class="w-24" src="/img/main2.png" alt="">
-                <div class="flex-1 ml-4">
-                    <h1>mok</h1>
-                    <span>desc</span>
-                </div>
-                <span class="flex-1">Pcs</span>
-                <span class="font-bold text-lg">$8</span>
-            </div>
         </div>
 
         <hr>
@@ -59,7 +38,7 @@
                         Total Amount
                     </span>
                     <span class="amount text-2xl font-bold ml-2">
-                        $32
+                        $<%= session.cart.totalPrice %> 
                     </span>
 
                 </div>
@@ -87,7 +66,10 @@
         </div>
 
     </div> 
-    <!-- <div class="empty-cart py-12">
+
+    <% } else { %>
+     
+    <div class="empty-cart py-12 ">
 
         <div class="container mx-auto text-center">
     
@@ -101,6 +83,8 @@
     
         </div> 
     
-    </div> -->
+    </div>
+
+    <% } %>
 
 </section>

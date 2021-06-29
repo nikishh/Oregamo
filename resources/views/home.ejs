@@ -23,212 +23,36 @@
 
             <div class="grid grid-cols-4 col-gap-12 row-gap-16">
 
-               <div>
-                   <img src="/img/main3.jpg" class="h-40 mb-4 mx-auto">
+                <% foods.forEach(food => { %>
+               
+                
+                    <div>
+    
+                        <img src="/img/<%- food.image %>" class="h-40 mb-4 mx-auto">
+     
+                        <div class="text-center">
+                           
+                         <h2 class="text-lg mb-4"> <%- food.name %>  Margherita</h2>
+     
+                         <span class="py-1 px-4 rounded-full uppercase text-xs smsize"><%- food.description %></span>
+     
+                         <div class="flex items-center justify-around mt-6">
+                               
+                            <span class="font-bold text-lg">$<%-food.price%> </span>
 
-                   <div class="text-center">
-                      
-                    <h2 class="text-lg mb-4">Margherita</h2>
-
-                    <span class="py-1 px-4 rounded-full uppercase text-xs smsize">Desc</span>
-
-                    <div class="flex items-center justify-around mt-6">
-                          
-                        <span class="font-bold text-lg">$50</span>
-                        <button class="cart py-1 px-6 rounded-full flex items-center font-bold">
-                            <span>+</span>
-                            <span class="ml-4">Add</span>
-                        </button>
-
+                            <button data-food="<%=JSON.stringify(food)%>"  class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold">
+                                <span>+</span>
+                                <span class="ml-4">Add</span>
+                            </button>
+     
+                        </div>
+     
+                        </div>
+                     
                     </div>
+    
+               <% }) %>
 
-                   </div>
- 
-               </div>
-
-               <div>
-                <img src="/img/main3.jpg" class="h-40 mb-4 mx-auto">
-
-                <div class="text-center">
-                   
-                 <h2 class="text-lg mb-4">Margherita</h2>
-
-                 <span class="py-1 px-4 rounded-full uppercase text-xs smsize">Desc</span>
-
-                 <div class="flex items-center justify-around mt-6">
-                       
-                     <span class="font-bold text-lg">$50</span>
-                     <button class="cart py-1 px-6 rounded-full flex items-center font-bold">
-                         <span>+</span>
-                         <span class="ml-4">Add</span>
-                     </button>
-
-                 </div>
-
-                </div>
-
-            </div>
-
-            <div>
-                <img src="/img/main3.jpg" class="h-40 mb-4 mx-auto">
-
-                <div class="text-center">
-                   
-                 <h2 class="text-lg mb-4">Margherita</h2>
-
-                 <span class="py-1 px-4 rounded-full uppercase text-xs smsize">Desc</span>
-
-                 <div class="flex items-center justify-around mt-6">
-                       
-                     <span class="font-bold text-lg">$50</span>
-                     <button class="cart py-1 px-6 rounded-full flex items-center font-bold">
-                         <span>+</span>
-                         <span class="ml-4">Add</span>
-                     </button>
-
-                 </div>
-
-                </div>
-
-            </div>
-
-            <div>
-                <img src="/img/main3.jpg" class="h-40 mb-4 mx-auto">
-
-                <div class="text-center">
-                   
-                 <h2 class="text-lg mb-4">Margherita</h2>
-
-                 <span class="py-1 px-4 rounded-full uppercase text-xs smsize">Desc</span>
-
-                 <div class="flex items-center justify-around mt-6">
-                       
-                     <span class="font-bold text-lg">$50</span>
-                     <button class="cart py-1 px-6 rounded-full flex items-center font-bold">
-                         <span>+</span>
-                         <span class="ml-4">Add</span>
-                     </button>
-
-                 </div>
-
-                </div>
-
-            </div>
-
-            <div>
-                <img src="/img/main3.jpg" class="h-40 mb-4 mx-auto">
-
-                <div class="text-center">
-                   
-                 <h2 class="text-lg mb-4">Margherita</h2>
-
-                 <span class="py-1 px-4 rounded-full uppercase text-xs smsize">Desc</span>
-
-                 <div class="flex items-center justify-around mt-6">
-                       
-                     <span class="font-bold text-lg">$50</span>
-                     <button class="cart py-1 px-6 rounded-full flex items-center font-bold">
-                         <span>+</span>
-                         <span class="ml-4">Add</span>
-                     </button>
-
-                 </div>
-
-                </div>
-
-            </div>
-
-            <div>
-                <img src="/img/main3.jpg" class="h-40 mb-4 mx-auto">
-
-                <div class="text-center">
-                   
-                 <h2 class="text-lg mb-4">Margherita</h2>
-
-                 <span class="py-1 px-4 rounded-full uppercase text-xs smsize">Desc</span>
-
-                 <div class="flex items-center justify-around mt-6">
-                       
-                     <span class="font-bold text-lg">$50</span>
-                     <button class="cart py-1 px-6 rounded-full flex items-center font-bold">
-                         <span>+</span>
-                         <span class="ml-4">Add</span>
-                     </button>
-
-                 </div>
-
-                </div>
-
-            </div>
-
-            <div>
-                <img src="/img/main3.jpg" class="h-40 mb-4 mx-auto">
-
-                <div class="text-center">
-                   
-                 <h2 class="text-lg mb-4">Margherita</h2>
-
-                 <span class="py-1 px-4 rounded-full uppercase text-xs smsize">Desc</span>
-
-                 <div class="flex items-center justify-around mt-6">
-                       
-                     <span class="font-bold text-lg">$50</span>
-                     <button class="cart py-1 px-6 rounded-full flex items-center font-bold">
-                         <span>+</span>
-                         <span class="ml-4">Add</span>
-                     </button>
-
-                 </div>
-
-                </div>
-
-            </div>
-
-            <div>
-                <img src="/img/main3.jpg" class="h-40 mb-4 mx-auto">
-
-                <div class="text-center">
-                   
-                 <h2 class="text-lg mb-4">Margherita</h2>
-
-                 <span class="py-1 px-4 rounded-full uppercase text-xs smsize">Desc</span>
-
-                 <div class="flex items-center justify-around mt-6">
-                       
-                     <span class="font-bold text-lg">$50</span>
-                     <button class="cart py-1 px-6 rounded-full flex items-center font-bold">
-                         <span>+</span>
-                         <span class="ml-4">Add</span>
-                     </button>
-
-                 </div>
-
-                </div>
-
-            </div>
-
-            <div>
-                <img src="/img/main3.jpg" class="h-40 mb-4 mx-auto">
-
-                <div class="text-center">
-                   
-                 <h2 class="text-lg mb-4">Margherita</h2>
-
-                 <span class="py-1 px-4 rounded-full uppercase text-xs smsize">Desc</span>
-
-                 <div class="flex items-center justify-around mt-6">
-                       
-                     <span class="font-bold text-lg">$50</span>
-                     <button class="cart py-1 px-6 rounded-full flex items-center font-bold">
-                         <span>+</span>
-                         <span class="ml-4">Add</span>
-                     </button>
-
-                 </div>
-
-                </div>
-
-            </div>
 
             </div>
 
