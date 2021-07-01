@@ -329,3 +329,7 @@ section.login a {
 section.login a:hover {
   color: #FC5404;
 }
+
+a.link {
+  color: #ff8c00;
+}

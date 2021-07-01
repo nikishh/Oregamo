@@ -14,4 +14,4 @@ function homeController() {
 
 }
 
-module.exports=homeController
+module.exports = homeController

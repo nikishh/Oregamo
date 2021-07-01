@@ -35,8 +35,8 @@ function cartController(){
                 cart.totalQty += 1
                 cart.totalPrice += req.body.price
             }
-            //return res.json({data: "okay"});
-            console.log(req.session.cart.totalQty)
+            
+            // console.log(req.session.cart.totalQty)
             return res.json({ totalQty: req.session.cart.totalQty })
         }
     }
