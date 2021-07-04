@@ -9,6 +9,7 @@ const flash =require('express-flash')
 const MongoStore = require('connect-mongo')
 const bodyParser = require('body-parser')
 const passport=require('passport')
+const Emitter=require('events')
 const port=process.env.port || 3000
 
 const app=express()
@@ -26,6 +27,9 @@ connection.once('open',()=>{
     console.log(err)
 })
 
+// Emmiter
+const eventEmitter=new Emitter()
+app.set('eventEmitter',eventEmitter)
 
 // session
 
@@ -65,8 +69,26 @@ app.set('view engine','ejs')
 require('./routes/web')(app)
 
 
-app.listen(port,(err)=>{
+const server=app.listen(port,(err)=>{
     if(!err){
         console.log(`Server Started at port ${port}!`)
     }
+})
+
+
+const io = require('socket.io')(server)
+
+io.on('connection', (socket) => {
+
+      socket.on('join', (orderId) => {
+
+        socket.join(orderId)
+
+      })
+})
+
+eventEmitter.on('orderUpdated', (data) => {
+
+    io.to(`order_${data.id}`).emit('orderUpdated', data)
+    
 })

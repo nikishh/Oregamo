@@ -19,7 +19,7 @@
                         <span><%=food.item.description%></span>
                     </div>
                     <span class="flex-1"><%= food.qty %> Pcs</span>
-                    <span class="font-bold text-lg">$<%= food.qty*food.item.price %> </span>
+                    <span class="font-bold text-lg">₹<%= food.qty*food.item.price %> </span>
                 </div>
 
             <% }%>
@@ -38,7 +38,7 @@
                         Total Amount
                     </span>
                     <span class="amount text-2xl font-bold ml-2">
-                        $<%= session.cart.totalPrice %> 
+                        ₹<%= session.cart.totalPrice %> 
                     </span>
 
                 </div>
